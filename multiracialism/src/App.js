@@ -1,30 +1,73 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import RandomChild from './RandomChild';
-import CarouselContainer from './Carousel'
 import imageInfo from './imageInfo';
+import SubmitAnswer from './SubmitAnswer';
+import Father from './Father';
+import Mother from './Mother';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       father: '',
       mother: '',
-      child: ''
+      child: '',
+      childImagePath: '',
+    };
+  }
+
+  // return true or false
+  checkAnswer = () => {
+    if (!imageInfo.child[this.state.child]) return false;
+    const getMother = imageInfo.child[this.state.child].mother[0];
+    const getFather = imageInfo.child[this.state.child].father[0];
+    if (this.state.father === getFather && this.state.mother === getMother) {
+      console.log('true');
+      return true;
     }
-  }
-  handleUpdateChild = (child) => {
+    // console.log(`${getMother} / ${getFather}`);
+  };
+
+  handleUpdatechildImagePath = childImagePath => {
     this.setState({
-      child
-    })
-  }
+      childImagePath,
+    });
+  };
+
+  handleUpdateChild = child => {
+    this.setState({
+      child,
+    });
+  };
+
+  handleUpdateMother = mother => {
+    const removePrefix = mother.replace('mother', '');
+    this.setState({
+      mother: removePrefix,
+    });
+  };
+
+  handleUpdateFather = father => {
+    const removePrefix = father.replace('father', '');
+    this.setState({
+      father: removePrefix,
+    });
+  };
+
   render() {
-    console.log(imageInfo);
     return (
       <div>
         <Header />
-        <RandomChild handleUpdateChild ={this.handleUpdateChild} selectedChild = {this.state.child}/>
-        <CarouselContainer/>
+        <RandomChild
+          handleUpdatechildImagePath={this.handleUpdatechildImagePath}
+          selectedChild={this.state.childImagePath}
+          handleUpdateChild={this.handleUpdateChild}
+        />
+        <Father handleUpdateFather={this.handleUpdateFather} />
+        <Mother handleUpdateMother={this.handleUpdateMother} />
+
+        <SubmitAnswer checkAnswer={this.checkAnswer} />
       </div>
     );
   }
