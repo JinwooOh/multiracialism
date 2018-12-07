@@ -4,11 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
 import { fatherImages } from './helper';
 
-const Wrapper = styled.section`
-  display: flex;
-  padding: 4em;
-  background: papayawhip;
-`;
+const Wrapper = styled.section``;
 
 export default class Father extends Component {
   constructor(props) {
@@ -31,8 +27,9 @@ export default class Father extends Component {
   render() {
     return (
       <Wrapper>
+        <h3 className="parent">Father</h3>
         <Carousel
-          width="230px"
+          className="container--carousel"
           selectedItem={this.state.currentSlide}
           onChange={this.updateCurrentSlide}
           {...this.props}

@@ -1,0 +1,11 @@
+.parent,
+.child {
+  display: block;
+  margin: 0 auto;
+  max-width: 50rem;;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  background-color: $color-primary;
+  color: $color-white;
+}

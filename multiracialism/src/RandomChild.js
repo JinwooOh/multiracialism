@@ -20,9 +20,11 @@ export default class RandomChild extends Component {
 
   render() {
     return (
-      <div>
-        <img src={this.props.selectedChild} alt="selectedChild"  />
+      <div className="container--randomChild">
+        <h3 className="child">Child</h3>
+        <img className="randomChild__image" src={this.props.selectedChild} alt="selectedChild" />
         <button
+          className="btn btn__randomChild"
           onClick={() => {
             this.getRandomChild(childImages);
           }}

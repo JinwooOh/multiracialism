@@ -3,15 +3,12 @@ import React, { Component } from 'react';
 export class SubmitAnswer extends Component {
   render() {
     return (
-      <div>
+      <div className="container--submit">
         <button
-          onClick={() => {
-            if (this.props.checkAnswer()) {
-              alert('You got it')
-            }
-          }}
+          className="btn"
+          onClick={() => (this.props.checkAnswer() ? alert('You got it') : alert('X'))}
         >
-          Hello?
+          Check Answer
         </button>
       </div>
     );

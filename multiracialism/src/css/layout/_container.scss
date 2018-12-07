@@ -1,0 +1,24 @@
+.container {
+  margin: 1.2rem;
+  &--allCarousels{
+    display: flex;
+    justify-content: center;
+    @include respond(tab-port) {
+      // width < 1200?
+      display: block;
+    }
+
+  }
+  &--carousel {
+    display: block;
+    margin: 0 auto;
+    max-width: 50rem;;
+  }
+  &--randomChild{
+    text-align: center;
+    margin: 2rem 0;
+  }
+  &--submit{
+    text-align: center;
+  }
+}

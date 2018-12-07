@@ -1,0 +1,10 @@
+.randomChild{
+  &__image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 50rem !important;
+    height: auto !important;
+  }
+}

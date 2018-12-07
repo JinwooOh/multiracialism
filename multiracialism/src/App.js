@@ -5,6 +5,7 @@ import imageInfo from './imageInfo';
 import SubmitAnswer from './SubmitAnswer';
 import Father from './Father';
 import Mother from './Mother';
+import Nav from './Nav';
 
 class App extends Component {
   constructor(props) {
@@ -58,16 +59,22 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <RandomChild
-          handleUpdatechildImagePath={this.handleUpdatechildImagePath}
-          selectedChild={this.state.childImagePath}
-          handleUpdateChild={this.handleUpdateChild}
-        />
-        <Father handleUpdateFather={this.handleUpdateFather} />
-        <Mother handleUpdateMother={this.handleUpdateMother} />
+        <Nav />
+        <div className="container">
+          <Header />
 
-        <SubmitAnswer checkAnswer={this.checkAnswer} />
+          <RandomChild
+            handleUpdatechildImagePath={this.handleUpdatechildImagePath}
+            selectedChild={this.state.childImagePath}
+            handleUpdateChild={this.handleUpdateChild}
+          />
+          <div className="container--allCarousels">
+            <Father handleUpdateFather={this.handleUpdateFather} />
+            <Mother handleUpdateMother={this.handleUpdateMother} />
+          </div>
+
+          <SubmitAnswer checkAnswer={this.checkAnswer} />
+        </div>
       </div>
     );
   }
