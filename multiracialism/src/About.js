@@ -55,6 +55,16 @@ export default class About extends Component {
           </p>
           <br />
           <p>Images are from Time magazine that was released on Nov.18, 1993.</p>
+          <p>
+            Source code is available at{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/JinwooOh/multiracialism"
+            >
+              Github
+            </a>
+          </p>
           <br />
           <p>
             About creator:{' '}
