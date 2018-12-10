@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
 @import "base/_base";
 @import "base/_animation";
-@import "base/_typography";
 @import "base/_utilities";
 
 @import "layout/_container";
 
 @import "components/_buttons";
+@import "components/_header";
+@import "components/_about";
 @import "components/_carousel";
 @import "components/_randomChild";
 @import "components/_nav";
+@import "components/_discussion";
 
 

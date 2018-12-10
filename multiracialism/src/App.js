@@ -5,6 +5,7 @@ import imageInfo from './imageInfo';
 import SubmitAnswer from './SubmitAnswer';
 import Father from './Father';
 import Mother from './Mother';
+import Discussion from './Discussion';
 import Nav from './Nav';
 
 class App extends Component {
@@ -74,6 +75,7 @@ class App extends Component {
           </div>
 
           <SubmitAnswer checkAnswer={this.checkAnswer} />
+          <Discussion />
         </div>
       </div>
     );

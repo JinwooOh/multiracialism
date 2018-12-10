@@ -28,6 +28,11 @@ html {
   //   url(../img/bg.png);
 }
 body {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
   min-height: 100vh;
+  background-color: $color-gray;
   // margin: 2rem;
 }

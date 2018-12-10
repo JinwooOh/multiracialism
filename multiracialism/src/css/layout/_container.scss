@@ -21,4 +21,21 @@
   &--submit{
     text-align: center;
   }
+  &--header,
+  &--about{
+    display: block;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 95rem;
+    font-size: 2.2rem;
+  }
+
+  &--discussion{
+    display: block;
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding: 2rem;
+    max-width: 95rem;;
+    font-size: 2.2rem;
+  }
 }

@@ -32,6 +32,7 @@ export default class Mother extends Component {
           className="container--carousel"
           selectedItem={this.state.currentSlide}
           onChange={this.updateCurrentSlide}
+          swipeScrollTolerance={100}
           {...this.props}
         >
           {Object.keys(motherImages).map((mother, i) => {
